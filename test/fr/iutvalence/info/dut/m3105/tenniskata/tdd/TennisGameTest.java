@@ -13,19 +13,56 @@ public class TennisGameTest
 		TennisGame currentGame = new TennisGame();
 		assertEquals(currentGame.getScore(),"love-all");
 	}
+	
+	
 	@Test
-	public void ifServerHasWinAPointAndRecieverNot(){
+	public void ifServerHasFifteenAndRecieverLove(){
 		TennisGame currentGame = new TennisGame();
 		currentGame.serverWinThePoint();
 		assertEquals(currentGame.getScore(), "fifteen-love");
 	}
+	@Test
+	public void ifServerHasThirtyAndRecieverLove(){
+		TennisGame currentGame = new TennisGame();
+		for(int nbIncrem = 0; nbIncrem < 2; nbIncrem++){
+			currentGame.serverWinThePoint();
+		}
+		assertEquals(currentGame.getScore(), "thirty-love");
+	}
+	@Test
+	public void ifServerHasFortyAndRecieverLove(){
+		TennisGame currentGame = new TennisGame();
+		for(int nbIncrem = 0; nbIncrem < 3; nbIncrem++){
+			currentGame.serverWinThePoint();
+		}
+		assertEquals(currentGame.getScore(), "forty-love");
+	}
+	
+	
 	
 	@Test
-	public void ifRecieverHasWinAPointAndServerNot(){
+	public void ifRecieverHasFifteenAndServerLove(){
 		TennisGame currentGame = new TennisGame();
 		currentGame.recieverWinThePoint();
 		assertEquals(currentGame.getScore(), "love-fifteen");
 	}
+	@Test
+	public void ifRecieverHasThirtyAndServerLove(){
+		TennisGame currentGame = new TennisGame();
+		for(int nbIncrem = 0; nbIncrem < 2; nbIncrem++){
+			currentGame.recieverWinThePoint();
+		}
+		assertEquals(currentGame.getScore(), "love-thirty");
+	}
+	@Test
+	public void ifRecieverHasFortyAndServerLove(){
+		TennisGame currentGame = new TennisGame();
+		for(int nbIncrem = 0; nbIncrem < 3; nbIncrem++){
+			currentGame.recieverWinThePoint();
+		}
+		assertEquals(currentGame.getScore(), "love-forty");
+	}
+	
 	
 	
 	
@@ -54,6 +91,8 @@ public class TennisGameTest
 		}
 		assertEquals(currentGame.getScore(), "forty-all");
 	}
+	
+	
 	
 	
 
