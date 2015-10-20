@@ -83,13 +83,13 @@ public class TennisGameTest
 		assertEquals(currentGame.getScore(), "thirty-all");
 	}
 	@Test
-	public void ifTheScoreOfTheGameIsEqualAndAtForty(){
+	public void ifTheScoreOfTheGameIsAtFortyForTheTwoPlayerSoItsDeuce(){
 		TennisGame currentGame = new TennisGame();
 		for(int nbIncrem = 0; nbIncrem < 3; nbIncrem++){
 			currentGame.recieverWinThePoint();
 			currentGame.serverWinThePoint();
 		}
-		assertEquals(currentGame.getScore(), "forty-all");
+		assertEquals(currentGame.getScore(), "deuce");
 	}
 	
 	

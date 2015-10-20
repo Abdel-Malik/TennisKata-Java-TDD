@@ -25,8 +25,13 @@ public class TennisGame
 		}else{
 			finalScore = (this.scoreServer + this.SEPARATION_SCORE + this.scoreReciever);
 		}
+		
 		return finalScore;
 	}
+	
+	//private String correctScore(String theScore){
+		
+	//}
 	
 	private boolean compareEqualityScore() {
 		boolean result = false;
