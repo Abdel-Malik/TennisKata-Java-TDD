@@ -14,14 +14,16 @@ public class TennisGameTest
 		assertEquals(currentGame.getScore(),"love-all");
 	}
 	@Test
-	public void ifServerhasMarkedAndRecieverNot(){
-		TennisGame currentGame = new TennisGame("fifteen-love");
+	public void ifServerHasWinAPointAndRecieverNot(){
+		TennisGame currentGame = new TennisGame();
+		currentGame.ServerWinThePoint();
 		assertEquals(currentGame.getScore(), "fifteen-love");
 	}
 	
-	
-	public void aTestWhenTheScoreIsEqual(){
-		
+	@Test
+	public void ifRecieverHasWinAPointAndServerNot(){
+		TennisGame currentGame = new TennisGame();
+		assertEquals(currentGame.getScore(), "love-fifteen");
 	}
 
 }
