@@ -9,7 +9,7 @@ import org.junit.Test;
 public class TennisGameTest
 {
 	@Test
-	public void aTestWhenTheScoreIsNullForTheTwoPlayers(){
+	public void ifTheScoreIsNullForTheTwoPlayers(){
 		TennisGame currentGame = new TennisGame();
 		assertEquals(currentGame.getScore(),"love-all");
 	}
@@ -37,6 +37,7 @@ public class TennisGameTest
 		}
 		assertEquals(currentGame.getScore(), "forty-love");
 	}
+	
 	
 	
 	
@@ -91,6 +92,11 @@ public class TennisGameTest
 		}
 		assertEquals(currentGame.getScore(), "deuce");
 	}
+	
+	
+	
+	
+	
 	
 	
 	
