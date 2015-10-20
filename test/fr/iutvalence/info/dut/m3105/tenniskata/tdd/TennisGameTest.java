@@ -26,5 +26,35 @@ public class TennisGameTest
 		currentGame.recieverWinThePoint();
 		assertEquals(currentGame.getScore(), "love-fifteen");
 	}
+	
+	
+	
+	@Test
+	public void ifTheScoreOfTheGameIsEqualAndAtFifteen(){
+		TennisGame currentGame = new TennisGame();
+		currentGame.recieverWinThePoint();
+		currentGame.serverWinThePoint();
+		assertEquals(currentGame.getScore(), "fifteen-all");
+	}
+	@Test
+	public void ifTheScoreOfTheGameIsEqualAndAtThirty(){
+		TennisGame currentGame = new TennisGame();
+		for(int nbIncrem = 0; nbIncrem < 2; nbIncrem++){
+			currentGame.recieverWinThePoint();
+			currentGame.serverWinThePoint();
+		}
+		assertEquals(currentGame.getScore(), "thirty-all");
+	}
+	@Test
+	public void ifTheScoreOfTheGameIsEqualAndAtForty(){
+		TennisGame currentGame = new TennisGame();
+		for(int nbIncrem = 0; nbIncrem < 3; nbIncrem++){
+			currentGame.recieverWinThePoint();
+			currentGame.serverWinThePoint();
+		}
+		assertEquals(currentGame.getScore(), "forty-all");
+	}
+	
+	
 
 }

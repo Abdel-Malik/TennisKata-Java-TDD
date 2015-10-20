@@ -59,9 +59,6 @@ public class TennisGame
 			case "thirty":
 				score = "forty";
 				break;
-			case "forty":
-				score = "win";
-				break;
 		}
 		return score;
 	}
