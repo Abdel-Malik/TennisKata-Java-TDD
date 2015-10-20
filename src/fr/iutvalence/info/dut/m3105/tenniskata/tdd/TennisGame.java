@@ -15,7 +15,7 @@ public class TennisGame
 	
 	
 	public String getScore() {
-		return this.buildScore();
+		return this.correctScore(this.buildScore());
 	}
 	
 	private String buildScore(){
@@ -29,9 +29,12 @@ public class TennisGame
 		return finalScore;
 	}
 	
-	//private String correctScore(String theScore){
-		
-	//}
+	private String correctScore(String theScore){
+		String correctScore = theScore;
+		if(theScore.equals("forty-all"))
+			correctScore = "deuce";
+		return correctScore;
+	}
 	
 	private boolean compareEqualityScore() {
 		boolean result = false;
