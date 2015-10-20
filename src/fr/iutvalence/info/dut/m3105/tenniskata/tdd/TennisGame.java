@@ -38,22 +38,32 @@ public class TennisGame
 
 
 
-	public void ServerWinThePoint(){
-		switch(this.scoreServer){
+	public void serverWinThePoint(){
+		this.scoreServer = returnUpScore(this.scoreServer);
+	}
+	
+	public void recieverWinThePoint(){
+		this.scoreReciever = returnUpScore(this.scoreReciever);
+	}
+
+
+
+	public static String returnUpScore(String score) {
+		switch(score){
 			case "love":
-				this.scoreServer = "fifteen";
+				score = "fifteen";
 				break;
 			case "fifteen":
-				this.scoreServer = "thirty";
+				score = "thirty";
 				break;
 			case "thirty":
-				this.scoreServer = "forty";
+				score = "forty";
 				break;
 			case "forty":
-				this.scoreServer = "win";
+				score = "win";
 				break;
 		}
-		
+		return score;
 	}
 
 }

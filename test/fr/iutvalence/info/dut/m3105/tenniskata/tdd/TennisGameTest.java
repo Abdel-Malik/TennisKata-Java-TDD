@@ -16,13 +16,14 @@ public class TennisGameTest
 	@Test
 	public void ifServerHasWinAPointAndRecieverNot(){
 		TennisGame currentGame = new TennisGame();
-		currentGame.ServerWinThePoint();
+		currentGame.serverWinThePoint();
 		assertEquals(currentGame.getScore(), "fifteen-love");
 	}
 	
 	@Test
 	public void ifRecieverHasWinAPointAndServerNot(){
 		TennisGame currentGame = new TennisGame();
+		currentGame.recieverWinThePoint();
 		assertEquals(currentGame.getScore(), "love-fifteen");
 	}
 
