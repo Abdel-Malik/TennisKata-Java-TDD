@@ -15,7 +15,7 @@ public class TennisGameTest
 	}
 	@Test
 	public void ifServerhasMarkedAndRecieverNot(){
-		TennisGame currentGame = new TennisGame();
+		TennisGame currentGame = new TennisGame("fifteen-love");
 		assertEquals(currentGame.getScore(), "fifteen-love");
 	}
 	
