@@ -96,7 +96,71 @@ public class TennisGameTest
 	
 	
 	
+	@Test
+	public void ifServerHasFifteenAndRecieverThirty(){
+		TennisGame currentGame = new TennisGame();
+		currentGame.serverWinThePoint();
+		for(int nbIncrem = 0; nbIncrem < 2; nbIncrem++){
+			currentGame.recieverWinThePoint();
+		}
+		assertEquals(currentGame.getScore(), "fifteen-thirty");
+	}	
+	@Test
+	public void ifServerHasFifteenAndRecieverForty(){
+		TennisGame currentGame = new TennisGame();
+		for(int nbIncrem = 0; nbIncrem < 3; nbIncrem++){
+			currentGame.recieverWinThePoint();
+		}
+		currentGame.serverWinThePoint();
+		assertEquals(currentGame.getScore(), "fifteen-forty");
+	}	
 	
+	@Test
+	public void ifServerHasThirtyAndRecieverFifteen(){
+		TennisGame currentGame = new TennisGame();
+		for(int nbIncrem = 0; nbIncrem < 2; nbIncrem++){
+			currentGame.serverWinThePoint();
+		}
+		currentGame.recieverWinThePoint();
+		assertEquals(currentGame.getScore(), "thirty-fifteen");
+	}
+	
+	@Test
+	public void ifServerHasThirtyAndRecieverForty(){
+		TennisGame currentGame = new TennisGame();
+		for(int nbIncrem = 0; nbIncrem < 2; nbIncrem++){
+			currentGame.serverWinThePoint();
+		}
+		for(int nbIncrem = 0; nbIncrem < 3; nbIncrem++){
+			currentGame.recieverWinThePoint();
+		}
+		assertEquals(currentGame.getScore(), "thirty-forty");
+	}
+	
+	@Test
+	public void ifServerHasFortyAndRecieverFifteen(){
+		TennisGame currentGame = new TennisGame();
+		for(int nbIncrem = 0; nbIncrem < 3; nbIncrem++){
+			currentGame.serverWinThePoint();
+		}
+		currentGame.recieverWinThePoint();
+		assertEquals(currentGame.getScore(), "forty-fifteen");
+	}
+	
+	@Test
+	public void ifServerHasFortyAndRecieverThirty(){
+		TennisGame currentGame = new TennisGame();
+		for(int nbIncrem = 0; nbIncrem < 3; nbIncrem++){
+			currentGame.serverWinThePoint();
+		}
+		for(int nbIncrem = 0; nbIncrem < 2; nbIncrem++){
+			currentGame.recieverWinThePoint();
+		}
+		assertEquals(currentGame.getScore(), "forty-thirty");
+	}
+	
+	
+
 	
 	
 	
